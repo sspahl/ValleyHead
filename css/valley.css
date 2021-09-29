@@ -1,0 +1,74 @@
+.top_row {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.top_text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.top_text_small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.top_row input[type=text] {
+    border: 0px;
+    border-bottom: 1px solid black;
+    
+}
+.next_row {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.next_row input[type=text] {
+    border: 0px;
+    border-bottom: 1px solid black;
+    
+}
+input[type=checkbox] {
+    border: 1px solid black; 
+    text-align: center;
+}
+.border-bottom-double {
+    border-bottom: 6px double black;
+
+}
+.order-table tbody th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.order-table tbody td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+.order-table tbody input[type=text] {
+    border: 0px;
+}
+.order-top-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.form-control:focus, .form-check-input:focus { 
+    box-shadow: none;
+    -webkit-box-shadow: none;
+} 
+.width1 {
+    width: 60px;
+}
+.width2 {
+    width: 80px;
+}
+.width3 {
+    width: 100px;
+}
+.left_header {
+    width: 220px;
+}
+

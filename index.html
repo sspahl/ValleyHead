@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Custom CSS Rules -->
+    <link rel="stylesheet" text="text/css" href="./css/valley.css" >
+</head>
+<body>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<!--
+
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Password</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Must be 8-20 characters long.
+    </span>
+  </div>
+</div>
+
+-->
+
+
+    <div class="container">
+    <form>
+        <div class="top_row row g-2 align-items-center">
+            <div class="col-2"> 
+                <div class="form-check">
+                    <input class="form-check-input float-end" type="checkbox" id="stock" name="job_type" name="STOCK">
+                    <label class="form-check-label" for="stock">STOCK</label><br>
+                </div>                
+                <div class="form-check">
+                    <input class="form-check-input float-end" type="checkbox" id="custom" name="job_type" name="CUSTOM">
+                    <label class="form-check-label" for="custom">CUSTOM</label><br>
+                </div>                
+                <div class="form-check">
+                    <input class="form-check-input float-end" type="checkbox" id="racing" name="job_type" name="RACING">
+                    <label class="form-check-label" for="racing">RACING</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div>Valley<br>Head Service<br>Image</div>
+            </div>
+            <div class="col-8">
+                <div class="row mb-2">
+                    <div class="col">VALLEY HEAD SERVICE, INC.</div>
+                    <div class="col-auto"><label for="head_work_order">HEAD WORK ORDER</label></div>
+                    <div class="col-auto"><input id="head_work_order" type="text"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">19340 LONDELIUS STREET &#8226; NORTHRIDGE, CA 91324</div>
+                    <div class="col-auto"><label for="block_wo">BLOCK W/O</label></div>
+                    <div class="col-auto"><input id="block_wo" type="text" ></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col top_row">(818) 993-7000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="top_text_small">BAR AJ 072866</span></div>
+                    <div class="col-auto"><label for="date" class="next_row">DATE</label></div>
+                    <div class="col-auto"><input id="date" type="date" ></div>
+                </div>
+            </div>
+        </div>
+        <div class="next_row row g-3 mb-2">
+            <div class="col-6 d-flex">
+                <label class="col-auto pe-1" for="name">NAME</label>
+                <input class="w-100" id="name" type="text"  >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="areacode">AREA CODE</label>
+                <input class="w-100" id="areacode" type="text" >
+            </div>
+            <div class="col-4 d-flex">
+                <label class="col-auto pe-1" for="phone">PHONE</label>
+                <input class="w-100" id="phone" type="text" >
+            </div>
+
+        </div>
+        <div class="next_row row g-3 mb-2">
+            <div class="col-6 d-flex">
+                <label class="col-auto pe-1" for="address">ADDRESS</label>
+                <input class="w-100" id="address" type="text" >
+            </div>
+            <div class="col-6 d-flex">
+                <label class="col-auto pe-1" for="po_order_no">PURCHASE ORDER NO.</label>
+                <input class="w-100" id="po_order_no" type="text" >
+            </div>
+        </div>
+        <div class="next_row row g-3 mb-2">
+            <div class="col-6 d-flex">
+                <label class="col-auto pe-1" for="city">CITY</label>
+                <input class="w-100" id="city" type="text" >
+            </div>
+            <div class="col-6 d-flex">
+                <label class="col-auto pe-1" for="date_required">DATE REQUIRED</label>
+                <input class="w-100" id="date_required" type="text" >
+            </div>
+        </div>
+        <div class="next_row row g-3 pb-2 mb-2 border-bottom-double">
+            <div class="col-4 d-flex">
+                <label class="col-auto pe-1" for="state">STATE</label>
+                <input class="w-100" id="state" type="text" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="zip">ZIP</label>
+                <input class="w-100" id="zip" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="shipby">SHIP BY</label>
+                <input class="w-100" id="shipby" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="deposit">DEPOSIT</label>
+                <input class="w-100" id="deposit" type="text" >
+            </div>
+        </div>
+        <div class="next_row row g-3 pb-2 mb-2 border-bottom-double">
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="make">MAKE</label>
+                <input class="w-100" id="make" type="text" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="model">MOD.</label>
+                <input class="w-100" id="model" type="text" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="year">YEAR</label>
+                <input class="w-100" id="year" type="text" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="ci">C.I.</label>
+                <input class="w-100" id="ci" type="text" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="intake">INTAKE VALVE</label>
+                <input class="w-100" id="intake" type="text" size="8" >
+            </div>
+            <div class="col-2 d-flex">
+                <label class="col-auto pe-1" for="exhaust">EXHAUST</label>
+                <input class="w-100" id="exhaust" type="text" size="8" >
+            </div>
+        </div>
+        <div class="next_row row pb-2 mb-2">
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="camgrinder">Cam Grinder</label>
+                <input class="w-100" id="camgrinder" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <span class="pe-1">Type</span> 
+                <div class="form-check w-25">
+                    <input class="form-check-input float-end" type="checkbox" id="ft" name="cam_type" name="FT">
+                    <label class="form-check-label" for="ft">FT</label>
+                </div>                
+                <div class="form-check w-25">
+                    <input class="form-check-input float-end" type="checkbox" id="rt" name="cam_type" name="RT">
+                    <label class="form-check-label" for="rt">RT</label>
+                </div>                
+                <div class="form-check w-25">
+                    <input class="form-check-input float-end" type="checkbox" id="hyd" name="cam_type" name="HYD">
+                    <label class="form-check-label" for="hyd">HYD</label><br>
+                </div>                
+                <div class="form-check w-25">
+                    <input class="form-check-input float-end" type="checkbox" id="sld" name="cam_type" name="SLD">
+                    <label class="form-check-label" for="sld">SLD</label><br>
+                </div>                
+            </div>
+            <div class="col-3 d-flex">
+                <label class="form-label col-auto pe-1" for="seatpressure">Seat Pressure</label>
+                <input class="form-check w-100" id="seatpressure" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="form-label col-auto pe-1" for="blown">Blown</label>
+                <input class="form-check w-100" id="blown" type="text" >
+            </div>
+        </div>
+        <div class="next_row row g-3 pb-2 mb-2 border-bottom-double">
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="camgrind">Cam Grind</label>
+                <input class="w-100" id="camgrind" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="camlift">Cam Lift</label>
+                <input class="w-100" id="camlift" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="openpressure">Open Pressure</label>
+                <input class="w-100" id="openpressure" type="text" >
+            </div>
+            <div class="col-3 d-flex">
+                <label class="col-auto pe-1" for="unblown">Unblown</label>
+                <input class="w-100" id="unblown" type="text" >
+            </div>
+
+        </div>
+
+        <div class="row pb-2 mb-2 ">
+            <div class="col-6">
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="left_header">DISASSEMBLY</th>
+                            <th >CHECK</th>
+                            <th >AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text" ></td>
+                            <td>Hot Tank & Mag</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Cold Tank</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Acid Dip</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Pressure Check</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Hot Tank & Mag</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Sandblast Ports</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>PORT & POLISH</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Comp. Port & Polish</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Street Master</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Mileage Stretcher</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Chambers</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>OS Intake</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>OS Exhaust</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>INTAKE MANIFOLD</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Port</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Match</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>GUIDES</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>R & R</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Bore & Install Iron</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Bore & Install Bronze</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Hard Seats</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Machine for PC Seats</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Machine Spring Pads</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>VALVE WORK</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Hyper-Flow</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Marathon</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Street</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-6">
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="left_header">SURFACING</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>"O" Ring"</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Weld Head</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Mill Head</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>&nbsp;&nbsp;&nbsp;Stock CC</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>&nbsp;&nbsp;&nbsp;Requested CC</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>&nbsp;&nbsp;&nbsp;Difference</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>&nbsp;&nbsp;&nbsp;Thou / CC</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>&nbsp;&nbsp;&nbsp;Amount Milled</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>ASSEMBLY</th>
+                            <th>CHECK</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>CRTR</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Less Assembly</td>
+                            <td><input class="width2" id="" type="text"></td>
+                            <td><input class="width3" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Installed Height</td>
+                            <td colspan="2">  Seat Pressure</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Coil Bind</td>
+                            <td colspan="2">Open Pressure</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Spring Travel</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="order-table">
+                    <thead>
+                        <tr >
+                            <th rowspan="2"></th>
+                            <th class="align-bottom" rowspan="2">PARTS</th>
+                            <th class="text-center order-top-header" colspan="2">Customer Supplied</th>
+                            <th class="text-center order-top-header" colspan="2">VHS Supplied</th>
+                        </tr>
+                        <tr>
+                            <th>NEW</th>
+                            <th>USED</th>
+                            <th>NEW</th>
+                            <th>USED</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Castings</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Valves Intake</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Valves Exhaust</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Springs</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Retainers</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Keepers</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Seals</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Rockers</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Manifolds</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Guides</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Studs & Guide Plates</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Spring Bases</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Gaskets</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td>Shims</td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                            <td><input class="width1" id="" type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="next_row row mb-2">
+                <div class="col-auto"><label for="remarks">REMARKS</label></div>
+                <div class="col-12"><textarea class="form-control" id="remarks" rows="4"></textarea></div>
+            </div>
+            <div class="next_row row mb-2">
+                <div class="col-4 d-flex">
+                    <label class="col-auto pe-1" for="authorizedby">AUTHORIZED BY</label>
+                    <input class="w-100" id="authorizedby" type="text">
+                </div>
+            </div>
+        </div>
+
+    </form>
+    </div>
+
+</body>
+</html>
